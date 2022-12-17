@@ -16,6 +16,7 @@
 		82AFF32A29441F950089812B /* JabTodoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFF32929441F950089812B /* JabTodoUITestsLaunchTests.swift */; };
 		82AFF337294420520089812B /* StorageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFF336294420520089812B /* StorageHandler.swift */; };
 		82AFF339294420E60089812B /* Tarefa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFF338294420E60089812B /* Tarefa.swift */; };
+		82EB52C9294D664C005762AB /* AddTarefaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EB52C8294D664C005762AB /* AddTarefaViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		82AFF32929441F950089812B /* JabTodoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JabTodoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		82AFF336294420520089812B /* StorageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageHandler.swift; sourceTree = "<group>"; };
 		82AFF338294420E60089812B /* Tarefa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarefa.swift; sourceTree = "<group>"; };
+		82EB52C8294D664C005762AB /* AddTarefaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTarefaViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				82AFF31029441F950089812B /* Assets.xcassets */,
 				82AFF31229441F950089812B /* Preview Content */,
 				82AFF338294420E60089812B /* Tarefa.swift */,
+				82EB52C8294D664C005762AB /* AddTarefaViewModel.swift */,
 			);
 			path = JabTodo;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82AFF30F29441F950089812B /* ContentView.swift in Sources */,
+				82EB52C9294D664C005762AB /* AddTarefaViewModel.swift in Sources */,
 				82AFF30D29441F950089812B /* JabTodoApp.swift in Sources */,
 				82AFF339294420E60089812B /* Tarefa.swift in Sources */,
 				82AFF337294420520089812B /* StorageHandler.swift in Sources */,
