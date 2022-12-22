@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		820497032953CE590030FE64 /* AddTarefaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820497022953CE590030FE64 /* AddTarefaView.swift */; };
+		820497052953D2AB0030FE64 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820497042953D2AB0030FE64 /* DatePickerView.swift */; };
 		82AFF30D29441F950089812B /* JabTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFF30C29441F950089812B /* JabTodoApp.swift */; };
 		82AFF30F29441F950089812B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFF30E29441F950089812B /* ContentView.swift */; };
 		82AFF31129441F950089812B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82AFF31029441F950089812B /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		820497022953CE590030FE64 /* AddTarefaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTarefaView.swift; sourceTree = "<group>"; };
+		820497042953D2AB0030FE64 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		82AFF30929441F950089812B /* JabTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JabTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82AFF30C29441F950089812B /* JabTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JabTodoApp.swift; sourceTree = "<group>"; };
 		82AFF30E29441F950089812B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 				82AFF31229441F950089812B /* Preview Content */,
 				82AFF338294420E60089812B /* Tarefa.swift */,
 				82EB52C8294D664C005762AB /* AddTarefaViewModel.swift */,
+				820497022953CE590030FE64 /* AddTarefaView.swift */,
+				820497042953D2AB0030FE64 /* DatePickerView.swift */,
 			);
 			path = JabTodo;
 			sourceTree = "<group>";
@@ -267,8 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				82AFF30F29441F950089812B /* ContentView.swift in Sources */,
+				820497032953CE590030FE64 /* AddTarefaView.swift in Sources */,
 				82EB52C9294D664C005762AB /* AddTarefaViewModel.swift in Sources */,
 				82AFF30D29441F950089812B /* JabTodoApp.swift in Sources */,
+				820497052953D2AB0030FE64 /* DatePickerView.swift in Sources */,
 				82AFF339294420E60089812B /* Tarefa.swift in Sources */,
 				82AFF337294420520089812B /* StorageHandler.swift in Sources */,
 			);

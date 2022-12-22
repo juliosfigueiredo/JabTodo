@@ -13,6 +13,7 @@ class AddTarefaViewModel: ObservableObject {
     @Published var description = String()
     @Published var date = Date()
     @Published var lista: [Tarefa] = []
+    @Published var selectedFrequencia: Frequencia = .umDia
     
     func createTarefa(){
         //Cria a Plist e Insere o novo item.
@@ -34,5 +35,11 @@ class AddTarefaViewModel: ObservableObject {
         StorageHandler.deleteAll()
         //Limpa o array.
         lista = StorageHandler.load()
+    }
+    
+    var dateClosedRange: ClosedRange<Date> {
+        let today = Calendar.current.date(byAdding: .minute, value: -1, to: Date())!
+        let seven = Calendar.current.date(byAdding: .day, value: 90, to: Date())!
+        return today...seven
     }
 }
