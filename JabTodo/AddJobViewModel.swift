@@ -8,22 +8,19 @@
 import Foundation
 import SwiftUI
 
-class AddTarefaViewModel: ObservableObject {
+class AddJobViewModel: ObservableObject {
     @Published var title = String()
     @Published var description = String()
     @Published var date = Date()
-    @Published var lista: [Tarefa] = []
-    @Published var selectedFrequencia: Frequencia = .umDia
+    @Published var selectedFrequency: Frequency = .umDia
     
-    func createTarefa(){
+    func createJob(){
         //Cria a Plist e Insere o novo item.
-        let tarefa = Tarefa(title: title, description: description, date: date)
-        StorageHandler.write(item: tarefa)
-        //Atualiza os dados do array.
-        updateListaTarefa()
+        let job = Job(title: title, description: description, date: date, isActive: true)
+        StorageHandler.write(item: job)
     }
     
-    
+    /*
     func updateListaTarefa(){
         //Carregar itens existentes na PList.
         lista = StorageHandler.load()
@@ -36,6 +33,7 @@ class AddTarefaViewModel: ObservableObject {
         //Limpa o array.
         lista = StorageHandler.load()
     }
+     */
     
     var dateClosedRange: ClosedRange<Date> {
         let today = Calendar.current.date(byAdding: .minute, value: -1, to: Date())!

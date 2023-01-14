@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Frequencia: String, CaseIterable, Identifiable {
+enum Frequency: String, CaseIterable, Identifiable {
     case umDia = "Uma vez ao dia"
     case dozeHoras = "12 em 12 horas"
     case dezHoras = "10 em 10 horas"
@@ -18,9 +18,9 @@ enum Frequencia: String, CaseIterable, Identifiable {
     var id: Self { self }
 }
 
-struct AddTarefaView: View {
+struct AddJobView: View {
     
-    @StateObject var viewModel: AddTarefaViewModel
+    @StateObject var viewModel: AddJobViewModel
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -32,8 +32,8 @@ struct AddTarefaView: View {
                     DatePickerView()
                 }
                 Section {
-                    Picker("Alerta", selection: $viewModel.selectedFrequencia) {
-                        ForEach(Frequencia.allCases) { frequencia in
+                    Picker("Alerta", selection: $viewModel.selectedFrequency) {
+                        ForEach(Frequency.allCases) { frequencia in
                             Text(frequencia.rawValue.capitalized)
                         }
                     }
@@ -68,8 +68,8 @@ struct AddTarefaView: View {
     }
 }
 
-struct AddTarefaView_Previews: PreviewProvider {
+struct AddJobView_Previews: PreviewProvider {
     static var previews: some View {
-        AddTarefaView(viewModel: AddTarefaViewModel())
+        AddJobView(viewModel: AddJobViewModel())
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DatePickerView: View {
-    @EnvironmentObject var viewModel: AddTarefaViewModel
+    @EnvironmentObject var viewModel: AddJobViewModel
     
     var body: some View {
         VStack {

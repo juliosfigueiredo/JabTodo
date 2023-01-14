@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class StorageHandler {
 
     
@@ -18,12 +17,12 @@ class StorageHandler {
         let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         
         //Criando o arquivo Plist na pasta documents.
-        return documents.appendingPathComponent("tarefas.plist")
+        return documents.appendingPathComponent("jobs.plist")
     }
     
     
     //MARK: - Criando novo item
-    static func write(item: Tarefa) {
+    static func write(item: Job) {
         
         //Verificando se já existe um Plist
         if !FileManager.default.fileExists(atPath: plistURL.path) {
@@ -46,10 +45,10 @@ class StorageHandler {
     
     
     //MARK: - Consultando itens
-    static func load() -> [Tarefa] {
+    static func load() -> [Job] {
         let decoder = PropertyListDecoder()
 
-        guard let data = try? Data.init(contentsOf: plistURL), let preferences = try? decoder.decode([Tarefa].self, from: data)
+        guard let data = try? Data.init(contentsOf: plistURL), let preferences = try? decoder.decode([Job].self, from: data)
           else { return [] }
 
         return preferences
@@ -69,7 +68,7 @@ class StorageHandler {
         
         
     //MARK: - Função que ajuda a `empacotar o dado` para que ele possa ser salvo e consultado de uma maneira mais simples.
-    static func prepareData(_ value: [Tarefa]) -> Data{
+    static func prepareData(_ value: [Job]) -> Data{
         
         let encoder = PropertyListEncoder()
         
