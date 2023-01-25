@@ -11,7 +11,7 @@ import SwiftUI
 struct JabTodoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            JobView(viewModel: JobViewModel())
         }
     }
 }

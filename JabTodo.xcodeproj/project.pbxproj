@@ -11,11 +11,10 @@
 		820497052953D2AB0030FE64 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820497042953D2AB0030FE64 /* DatePickerView.swift */; };
 		820497072953E46C0030FE64 /* JobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820497062953E46C0030FE64 /* JobView.swift */; };
 		8228EAC129720FAD007DEF0B /* JobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8228EAC029720FAD007DEF0B /* JobViewModel.swift */; };
-		8228EAC32972101B007DEF0B /* TarefaUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8228EAC22972101B007DEF0B /* TarefaUIState.swift */; };
 		8238420529723E3B003907F0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238420429723E3B003907F0 /* Utils.swift */; };
 		82384207297245B1003907F0 /* JobRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82384206297245B1003907F0 /* JobRowView.swift */; };
+		8247C1162981AA2B0085460B /* Frequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8247C1152981AA2B0085460B /* Frequency.swift */; };
 		82AFF30D29441F950089812B /* JabTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFF30C29441F950089812B /* JabTodoApp.swift */; };
-		82AFF30F29441F950089812B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFF30E29441F950089812B /* ContentView.swift */; };
 		82AFF31129441F950089812B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82AFF31029441F950089812B /* Assets.xcassets */; };
 		82AFF31429441F950089812B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82AFF31329441F950089812B /* Preview Assets.xcassets */; };
 		82AFF31E29441F950089812B /* JabTodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFF31D29441F950089812B /* JabTodoTests.swift */; };
@@ -48,12 +47,11 @@
 		820497042953D2AB0030FE64 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		820497062953E46C0030FE64 /* JobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobView.swift; sourceTree = "<group>"; };
 		8228EAC029720FAD007DEF0B /* JobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModel.swift; sourceTree = "<group>"; };
-		8228EAC22972101B007DEF0B /* TarefaUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefaUIState.swift; sourceTree = "<group>"; };
 		8238420429723E3B003907F0 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		82384206297245B1003907F0 /* JobRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRowView.swift; sourceTree = "<group>"; };
+		8247C1152981AA2B0085460B /* Frequency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frequency.swift; sourceTree = "<group>"; };
 		82AFF30929441F950089812B /* JabTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JabTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82AFF30C29441F950089812B /* JabTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JabTodoApp.swift; sourceTree = "<group>"; };
-		82AFF30E29441F950089812B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		82AFF31029441F950089812B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82AFF31329441F950089812B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		82AFF31929441F950089812B /* JabTodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JabTodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +89,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8247C1172981AB650085460B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				82AFF336294420520089812B /* StorageHandler.swift */,
+				8238420429723E3B003907F0 /* Utils.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		8247C1182981AC6C0085460B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8247C1152981AA2B0085460B /* Frequency.swift */,
+				82AFF338294420E60089812B /* Job.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8247C1192981ACA00085460B /* Job */ = {
+			isa = PBXGroup;
+			children = (
+				8247C11A2981ACBC0085460B /* Views */,
+				8247C11B2981ACC60085460B /* ViewModels */,
+				8247C1182981AC6C0085460B /* Models */,
+			);
+			path = Job;
+			sourceTree = "<group>";
+		};
+		8247C11A2981ACBC0085460B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				820497062953E46C0030FE64 /* JobView.swift */,
+				82384206297245B1003907F0 /* JobRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8247C11B2981ACC60085460B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8228EAC029720FAD007DEF0B /* JobViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8247C11C2981AD170085460B /* AddJob */ = {
+			isa = PBXGroup;
+			children = (
+				8247C11E2981AD2E0085460B /* ViewModels */,
+				8247C11D2981AD250085460B /* Views */,
+			);
+			path = AddJob;
+			sourceTree = "<group>";
+		};
+		8247C11D2981AD250085460B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				820497022953CE590030FE64 /* AddJobView.swift */,
+				820497042953D2AB0030FE64 /* DatePickerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8247C11E2981AD2E0085460B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				82EB52C8294D664C005762AB /* AddJobViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		82AFF30029441F950089812B = {
 			isa = PBXGroup;
 			children = (
@@ -115,19 +184,11 @@
 			isa = PBXGroup;
 			children = (
 				82AFF30C29441F950089812B /* JabTodoApp.swift */,
-				82AFF30E29441F950089812B /* ContentView.swift */,
-				82AFF336294420520089812B /* StorageHandler.swift */,
 				82AFF31029441F950089812B /* Assets.xcassets */,
+				8247C11C2981AD170085460B /* AddJob */,
+				8247C1192981ACA00085460B /* Job */,
+				8247C1172981AB650085460B /* Shared */,
 				82AFF31229441F950089812B /* Preview Content */,
-				82AFF338294420E60089812B /* Job.swift */,
-				82EB52C8294D664C005762AB /* AddJobViewModel.swift */,
-				820497022953CE590030FE64 /* AddJobView.swift */,
-				820497042953D2AB0030FE64 /* DatePickerView.swift */,
-				820497062953E46C0030FE64 /* JobView.swift */,
-				8228EAC029720FAD007DEF0B /* JobViewModel.swift */,
-				8228EAC22972101B007DEF0B /* TarefaUIState.swift */,
-				8238420429723E3B003907F0 /* Utils.swift */,
-				82384206297245B1003907F0 /* JobRowView.swift */,
 			);
 			path = JabTodo;
 			sourceTree = "<group>";
@@ -287,7 +348,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82AFF30F29441F950089812B /* ContentView.swift in Sources */,
 				820497072953E46C0030FE64 /* JobView.swift in Sources */,
 				820497032953CE590030FE64 /* AddJobView.swift in Sources */,
 				82EB52C9294D664C005762AB /* AddJobViewModel.swift in Sources */,
@@ -297,7 +357,7 @@
 				820497052953D2AB0030FE64 /* DatePickerView.swift in Sources */,
 				8238420529723E3B003907F0 /* Utils.swift in Sources */,
 				82AFF339294420E60089812B /* Job.swift in Sources */,
-				8228EAC32972101B007DEF0B /* TarefaUIState.swift in Sources */,
+				8247C1162981AA2B0085460B /* Frequency.swift in Sources */,
 				82AFF337294420520089812B /* StorageHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
