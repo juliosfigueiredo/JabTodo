@@ -12,9 +12,6 @@ struct AddJobView: View {
     @StateObject var viewModel: AddJobViewModel
     @Environment(\.presentationMode) var presentationMode
     
-    
-    //TESTE
-    
     var body: some View {
         NavigationView {
             Form {

@@ -38,6 +38,12 @@ struct JobView: View {
                 }
             }
         }
+        .onAppear {
+            viewModel.getList()
+        }
+        .sheet(isPresented: $viewModel.appInit) {
+            viewModel.launchView()
+        }
     }
 }
 

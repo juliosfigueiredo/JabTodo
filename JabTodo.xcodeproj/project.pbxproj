@@ -22,6 +22,10 @@
 		82AFF32A29441F950089812B /* JabTodoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFF32929441F950089812B /* JabTodoUITestsLaunchTests.swift */; };
 		82AFF337294420520089812B /* StorageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFF336294420520089812B /* StorageHandler.swift */; };
 		82AFF339294420E60089812B /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFF338294420E60089812B /* Job.swift */; };
+		82E0BED12982CF100052B5F0 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E0BED02982CF100052B5F0 /* LocalDataSource.swift */; };
+		82E0BED4298330280052B5F0 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E0BED3298330280052B5F0 /* LaunchView.swift */; };
+		82E0BED6298330580052B5F0 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E0BED5298330580052B5F0 /* LaunchViewModel.swift */; };
+		82E0BED8298333D60052B5F0 /* JobViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E0BED7298333D60052B5F0 /* JobViewRouter.swift */; };
 		82EB52C9294D664C005762AB /* AddJobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EB52C8294D664C005762AB /* AddJobViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +65,10 @@
 		82AFF32929441F950089812B /* JabTodoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JabTodoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		82AFF336294420520089812B /* StorageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageHandler.swift; sourceTree = "<group>"; };
 		82AFF338294420E60089812B /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		82E0BED02982CF100052B5F0 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
+		82E0BED3298330280052B5F0 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		82E0BED5298330580052B5F0 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		82E0BED7298333D60052B5F0 /* JobViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewRouter.swift; sourceTree = "<group>"; };
 		82EB52C8294D664C005762AB /* AddJobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJobViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +102,8 @@
 			children = (
 				82AFF336294420520089812B /* StorageHandler.swift */,
 				8238420429723E3B003907F0 /* Utils.swift */,
+				82E0BED02982CF100052B5F0 /* LocalDataSource.swift */,
+				82E0BED7298333D60052B5F0 /* JobViewRouter.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -183,6 +193,7 @@
 		82AFF30B29441F950089812B /* JabTodo */ = {
 			isa = PBXGroup;
 			children = (
+				82E0BED2298330140052B5F0 /* Launch */,
 				82AFF30C29441F950089812B /* JabTodoApp.swift */,
 				82AFF31029441F950089812B /* Assets.xcassets */,
 				8247C11C2981AD170085460B /* AddJob */,
@@ -216,6 +227,15 @@
 				82AFF32929441F950089812B /* JabTodoUITestsLaunchTests.swift */,
 			);
 			path = JabTodoUITests;
+			sourceTree = "<group>";
+		};
+		82E0BED2298330140052B5F0 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				82E0BED3298330280052B5F0 /* LaunchView.swift */,
+				82E0BED5298330580052B5F0 /* LaunchViewModel.swift */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,10 +371,14 @@
 				820497072953E46C0030FE64 /* JobView.swift in Sources */,
 				820497032953CE590030FE64 /* AddJobView.swift in Sources */,
 				82EB52C9294D664C005762AB /* AddJobViewModel.swift in Sources */,
+				82E0BED4298330280052B5F0 /* LaunchView.swift in Sources */,
+				82E0BED8298333D60052B5F0 /* JobViewRouter.swift in Sources */,
 				82AFF30D29441F950089812B /* JabTodoApp.swift in Sources */,
 				82384207297245B1003907F0 /* JobRowView.swift in Sources */,
 				8228EAC129720FAD007DEF0B /* JobViewModel.swift in Sources */,
+				82E0BED12982CF100052B5F0 /* LocalDataSource.swift in Sources */,
 				820497052953D2AB0030FE64 /* DatePickerView.swift in Sources */,
+				82E0BED6298330580052B5F0 /* LaunchViewModel.swift in Sources */,
 				8238420529723E3B003907F0 /* Utils.swift in Sources */,
 				82AFF339294420E60089812B /* Job.swift in Sources */,
 				8247C1162981AA2B0085460B /* Frequency.swift in Sources */,
