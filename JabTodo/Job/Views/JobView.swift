@@ -13,9 +13,21 @@ struct JobView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(Utils.ValorFake.listaJobFake) { job in
-                    JobRowView(job: job)
+            ZStack {
+                if viewModel.lista.count == 0 {
+                    Text("Você ainda não adicionou nenhuma tarefa!")
+                } else {
+                    List {
+                        ForEach(viewModel.lista) { job in
+                            JobRowView(job: job)
+                        }
+                        .onDelete { index in
+                            // MARK: - Pega o item selecionado pelo index da List
+                            let item = viewModel.lista[index.first!]
+                            // MARK: - Passa o item para o método de deletar
+                            viewModel.deleteItem(id: item.id)
+                        }
+                    }
                 }
             }
             .navigationBarTitle("Tarefas")
@@ -33,7 +45,7 @@ struct JobView: View {
                             .foregroundColor(.white)
                     }
                     .sheet(isPresented: $isShowView) {
-                        AddJobView(viewModel: AddJobViewModel())
+                        viewModel.addJobView()
                     }
                 }
             }

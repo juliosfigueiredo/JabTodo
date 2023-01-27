@@ -30,7 +30,8 @@ class LocalDataSource {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [id])
     }
     
-    func addNotification(id: String, message: String, time: TimeInterval) {
+    func addNotification(id: UUID, message: String, time: TimeInterval) {
+        let idString = id.uuidString
         let stopNotificationAction = UNNotificationAction(identifier: "jabTodo.stopNotificationAction", title: "Parar notificação", options: [])
         let cancelarAction = UNNotificationAction(identifier: "jabTodo.cancelarAction", title: "Cancelar", options: [])
 
@@ -49,7 +50,7 @@ class LocalDataSource {
         
         let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: time, repeats: true)
 
-        let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: idString, content: content, trigger: trigger)
 
         UNUserNotificationCenter.current().add(request)
     }
@@ -58,7 +59,7 @@ class LocalDataSource {
 extension LocalDataSource {
     
     // MARK: - Adiciona uma notificação local passando um id, uma mensagem e um intervalo
-    func setNotification(id: String, message: String, time: TimeInterval) {
+    func setNotification(id: UUID, message: String, time: TimeInterval) {
         addNotification(id: id, message: message, time: time)
     }
     

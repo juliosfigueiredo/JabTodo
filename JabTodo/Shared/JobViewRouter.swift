@@ -15,4 +15,11 @@ enum JobViewRouter {
     static func makeLaunchView() -> some View {
         return LaunchView(viewModel: LaunchViewModel())
     }
+    
+    // MARK: - Rota para chamar a tela de nova tarefa, esta viewModel é diferente pois ela recebe da tela inicial um cara (publisher) que vai ficar escutado quando for criada uma nova tarefa e vai avisar a tela inicial
+    static func makeAddJobView(jobPublisher: PassthroughSubject<Bool, Never>) -> some View {
+        let viewModel = AddJobViewModel()
+        viewModel.jobPublisher = jobPublisher
+        return AddJobView(viewModel: viewModel)
+    }
 }

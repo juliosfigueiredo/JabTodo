@@ -54,6 +54,16 @@ class StorageHandler {
         return preferences
     }
     
+    static func delete(id: UUID) {
+        let lista = load()
+        let itensRestantes = lista.filter { $0.id != id }
+        deleteAll()
+        
+        for job in itensRestantes {
+            write(item: job)
+        }
+    }
+    
     
     //MARK: - Excluíndo Plist
     static func deleteAll() {

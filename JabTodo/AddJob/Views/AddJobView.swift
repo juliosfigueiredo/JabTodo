@@ -40,6 +40,7 @@ struct AddJobView: View {
                 }
                 ToolbarItem(id: "add", placement: ToolbarItemPlacement.navigationBarTrailing, showsByDefault: true) {
                     Button {
+                        viewModel.createJob()
                         dismiss()
                     } label: {
                         Text("Adicionar")

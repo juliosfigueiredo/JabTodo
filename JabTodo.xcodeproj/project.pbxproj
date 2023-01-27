@@ -193,11 +193,11 @@
 		82AFF30B29441F950089812B /* JabTodo */ = {
 			isa = PBXGroup;
 			children = (
-				82E0BED2298330140052B5F0 /* Launch */,
 				82AFF30C29441F950089812B /* JabTodoApp.swift */,
 				82AFF31029441F950089812B /* Assets.xcassets */,
 				8247C11C2981AD170085460B /* AddJob */,
 				8247C1192981ACA00085460B /* Job */,
+				82E0BED2298330140052B5F0 /* Launch */,
 				8247C1172981AB650085460B /* Shared */,
 				82AFF31229441F950089812B /* Preview Content */,
 			);
@@ -232,10 +232,26 @@
 		82E0BED2298330140052B5F0 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
-				82E0BED3298330280052B5F0 /* LaunchView.swift */,
-				82E0BED5298330580052B5F0 /* LaunchViewModel.swift */,
+				82E0BED92983364C0052B5F0 /* Views */,
+				82E0BEDA298336550052B5F0 /* ViewModels */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		82E0BED92983364C0052B5F0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				82E0BED3298330280052B5F0 /* LaunchView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		82E0BEDA298336550052B5F0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				82E0BED5298330580052B5F0 /* LaunchViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
