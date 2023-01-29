@@ -9,7 +9,7 @@ import SwiftUI
 
 struct JobView: View {
     @State var isShowView: Bool = false
-    @StateObject var viewModel: JobViewModel
+    @ObservedObject var viewModel: JobViewModel
     
     var body: some View {
         NavigationStack {
@@ -19,13 +19,22 @@ struct JobView: View {
                 } else {
                     List {
                         ForEach(viewModel.lista) { job in
-                            JobRowView(job: job)
-                        }
-                        .onDelete { index in
-                            // MARK: - Pega o item selecionado pelo index da List
-                            let item = viewModel.lista[index.first!]
-                            // MARK: - Passa o item para o método de deletar
-                            viewModel.deleteItem(id: item.id)
+                            JobRowView(viewModel: JobRowViewModel(job: job))
+                                .swipeActions(allowsFullSwipe: false) {
+                                    Button {
+                                        viewModel.checkJob(job: job)
+                                    } label: {
+                                        Label("Finalizar", systemImage: "text.badge.checkmark")
+                                    }
+                                    .tint(.indigo)
+
+                                    Button(role: .destructive) {
+                                        // MARK: - Passa o item para o método de deletar
+                                        viewModel.deleteItem(id: job.id)
+                                    } label: {
+                                        Label("Apagar", systemImage: "trash.fill")
+                                    }
+                                }
                         }
                     }
                 }

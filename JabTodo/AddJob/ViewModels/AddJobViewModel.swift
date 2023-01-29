@@ -20,7 +20,7 @@ class AddJobViewModel: ObservableObject {
     
     func createJob(){
         //Cria a Plist e Insere o novo item.
-        let job = Job(title: title, description: description, date: date, isActive: true)
+        let job = Job(id: UUID(), title: title, description: description, date: date, isActive: true)
         StorageHandler.write(item: job)
         // Seta o publisher para avisar a tela inicial que ela precisa se atualizar
         self.jobPublisher?.send(true)

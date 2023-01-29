@@ -29,13 +29,20 @@ class JobViewModel: ObservableObject {
     
     // MARK: - Carrega itens existentes na PList
     func getList(){
+        lista = []
         lista = StorageHandler.load()
     }
     
     // MARK: - Metodo para deletar que recebe pelo id do item, depois de deletado o item na PList é preciso limpar a lista da view para depois carregar ela novamente com os novos itens.
     func deleteItem(id: UUID) {
         StorageHandler.delete(id: id)
-        lista = []
+        getList()
+    }
+    
+    func checkJob(job: Job) {
+        let newJob = Job(id: job.id, title: job.title, description: job.description, date: job.date, isActive: false)
+        deleteItem(id: job.id)
+        StorageHandler.write(item: newJob)
         getList()
     }
 }

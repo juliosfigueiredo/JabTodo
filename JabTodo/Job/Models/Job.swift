@@ -9,14 +9,23 @@ import Foundation
 import UIKit
 import SwiftUI
 
-struct Job: Identifiable, Codable, Hashable {
-    var id = UUID()
+class Job: Identifiable, Codable, Hashable {
+    static func == (lhs: Job, rhs: Job) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    var id: UUID
     var title: String
     var description: String
     var date: Date
     var isActive: Bool
 
-    init(title: String, description: String, date: Date, isActive: Bool) {
+    init(id: UUID, title: String, description: String, date: Date, isActive: Bool) {
+        self.id = id
         self.title = title
         self.description = description
         self.date = date
