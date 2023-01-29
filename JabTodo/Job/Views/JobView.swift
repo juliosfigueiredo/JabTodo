@@ -21,12 +21,14 @@ struct JobView: View {
                         ForEach(viewModel.lista) { job in
                             JobRowView(viewModel: JobRowViewModel(job: job))
                                 .swipeActions(allowsFullSwipe: false) {
-                                    Button {
-                                        viewModel.checkJob(job: job)
-                                    } label: {
-                                        Label("Finalizar", systemImage: "text.badge.checkmark")
+                                    if job.isActive {
+                                        Button {
+                                            viewModel.checkJob(job: job)
+                                        } label: {
+                                            Label("Finalizar", systemImage: "text.badge.checkmark")
+                                        }
+                                        .tint(.indigo)
                                     }
-                                    .tint(.indigo)
 
                                     Button(role: .destructive) {
                                         // MARK: - Passa o item para o método de deletar
